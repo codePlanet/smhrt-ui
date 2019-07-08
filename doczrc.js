@@ -1,6 +1,6 @@
 export default {
   title: 'smHRt Documentation',
-  dest: '/build/docs',
+  dest: '/build',
   codeSandbox: false,
   typescript: true,
   modifyBundlerConfig: bundlerConfig => {

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build & yarn build:docz",
-    "build:docz": "yarn docz build",
+    "build:docs": "yarn docz build",
     "test": "react-scripts test",
     "analyze": "source-map-explorer build/static/js/main.*"
   },
