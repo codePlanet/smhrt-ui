@@ -2,36 +2,44 @@
   "name": "smhrt-react",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
+    "dev": "yarn docz:dev",
     "start": "react-scripts start",
-    "build": "react-scripts build & yarn build:docz",
-    "build:docs": "yarn docz build",
+    "build": "react-scripts build & yarn docz:build",
+    "docz:dev": "docz dev",
+    "docz:build": "yarn docz build",
     "test": "react-scripts test",
     "analyze": "source-map-explorer build/static/js/main.*"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "emotion": "^10.0.27",
     "react": "^16.8.6",
     "react-dom": "^16.8.2",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
-    "@types/jest": "24.0.5",
-    "@types/node": "11.9.4",
-    "@types/react": "16.8.3",
-    "@types/react-dom": "16.8.2",
-    "@types/react-router-dom": "^4.3.1",
+    "@types/jest": "25.1.2",
+    "@types/node": "13.7.1",
+    "@types/react": "16.9.19",
+    "@types/react-dom": "16.9.5",
+    "@types/react-router-dom": "^5.1.3",
     "css-loader": "^3.0.0",
-    "docz": "^1.2.0",
-    "docz-theme-default": "^1.2.0",
-    "husky": "^1.3.1",
-    "lint-staged": "^8.1.5",
+    "docz": "latest",
+    "gatsby-plugin-sass": "^2.1.28",
+    "gatsby-theme-docz": "^2.2.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.4",
-    "react-scripts": "3.0.1",
-    "sass-loader": "^7.1.0",
-    "source-map-explorer": "^1.7.0",
-    "style-loader": "^0.23.1",
-    "typescript": "3.3.3"
+    "react-scripts": "3.4.0",
+    "sass-loader": "^8.0.2",
+    "source-map-explorer": "^2.2.2",
+    "style-loader": "^1.1.3",
+    "typescript": "3.7.5",
+    "webpack": "4.41.5",
+    "webpack-dev-server": "3.10.2"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,8 +51,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --single-quote --write",
-      "git add"
+      "prettier --single-quote --write"
     ]
   },
   "resolutions": {

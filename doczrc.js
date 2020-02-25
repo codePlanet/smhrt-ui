@@ -1,6 +1,7 @@
 export default {
-  title: 'smHRt Documentation',
+  title: 'smHRt Blox',
   dest: '/build',
+  files: '**/*.mdx',
   codeSandbox: false,
   typescript: true,
   modifyBundlerConfig: bundlerConfig => {
