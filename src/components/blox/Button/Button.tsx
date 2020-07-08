@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 import { ThemeProps } from '../../../types/Theme';
 
 interface ButtonProps extends ThemeProps {
-  type: string;
+  actionType?: string;
 }
 
-const backgroundColor = (theme, type: string) => {
+const backgroundColor = (theme: any, type?: string) => {
   switch (type) {
     case 'alternate':
       return theme.alternateActionColor;
@@ -21,9 +21,10 @@ export const Button = styled.button<ButtonProps>`
   border-radius: 1rem;
   font: bold 2rem Lato;
   text-transform: uppercase;
-  color: ${({ theme, type }) =>
-    type === 'secondary' ? theme.actionColor : '#ffffff'};
-  background-color: ${({ theme, type }) => backgroundColor(theme, type)};
+  color: ${({ theme, actionType }) =>
+    actionType === 'secondary' ? theme.actionColor : '#ffffff'};
+  background-color: ${({ theme, actionType }) =>
+    backgroundColor(theme, actionType)};
   border: 1px solid ${({ theme }) => theme.actionColor};
   cursor: pointer;
 
@@ -34,10 +35,10 @@ export const Button = styled.button<ButtonProps>`
   &:disabled,
   &.disabled {
     color: ${({ theme }) => theme.disabledFontColor};
-    background-color: ${({ theme, type }) =>
-      type === 'secondary' ? '#ffffff' : theme.disabledBackgroundColor};
-    border-color: ${({ theme, type }) =>
-      type === 'secondary'
+    background-color: ${({ theme, actionType }) =>
+      actionType === 'secondary' ? '#ffffff' : theme.disabledBackgroundColor};
+    border-color: ${({ theme, actionType }) =>
+      actionType === 'secondary'
         ? theme.disabledFontColor
         : theme.disabledBackgroundColor};
     cursor: not-allowed;

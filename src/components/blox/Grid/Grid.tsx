@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
-import { Flex, Box, BoxType, BoxProps } from 'reflexbox';
+import { Flex, Box, BoxType } from 'reflexbox';
+import { FlexboxProps } from 'styled-system';
 
-type GridProps = Omit<BoxType, '__emotion_styles' | 'withComponent'> & BoxProps;
+type GridProps = Omit<BoxType, '__emotion_styles' | 'withComponent'> &
+  FlexboxProps;
 
 export const Container = styled(Flex)`
   max-width: 1400px;

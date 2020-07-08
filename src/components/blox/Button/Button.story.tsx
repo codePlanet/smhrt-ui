@@ -32,8 +32,8 @@ export const Buttons = () => (
       <Column>
         <h2>Secondary</h2>
         <ButtonGroup>
-          <Button type="secondary">Button</Button>
-          <Button type="secondary" disabled>
+          <Button actionType="secondary">Button</Button>
+          <Button actionType="secondary" disabled>
             Button
           </Button>
         </ButtonGroup>
