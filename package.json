@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build & yarn docz:build",
+    "build": "react-scripts build & yarn build-storybook",
     "test": "react-scripts test",
     "analyze": "source-map-explorer build/static/js/main.*",
     "storybook": "start-storybook -p 9009 -s public",
